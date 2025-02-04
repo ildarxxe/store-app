@@ -1,6 +1,6 @@
-import Categories from "./components/other/Categotries";
-import GoodsRender from "./components/other/GoodsRender";
-import Stock from "./components/other/Stock";
+import Categories from "./components/other/home/Categotries";
+import GoodsRender from "./components/other/home/GoodsRender";
+import Stock from "./components/other/home/Stock";
 
 function Home() {
     return (

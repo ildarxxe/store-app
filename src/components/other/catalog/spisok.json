@@ -1,0 +1,37 @@
+[{
+        "category": "Одежда и обувь",
+        "brand": "Nike"
+    },
+    {
+        "category": "Электроника",
+        "brand": "Adidas"
+    },
+    {
+        "category": "Товары для дома",
+        "brand": "Zara"
+    },
+    {
+        "category": "Красота и здоровье",
+        "brand": "Apple"
+    },
+    {
+        "category": "Детские товары",
+        "brand": "HP"
+    },
+    {
+        "category": "Спорт",
+        "brand": "IKEA"
+    },
+    {
+        "category": "Автотовары",
+        "brand": "Nestle"
+    },
+    {
+        "category": "здоровье",
+        "brand": "Giant"
+    },
+    {
+        "category": "Канцтовары",
+        "brand": "Colgate"
+    }
+]

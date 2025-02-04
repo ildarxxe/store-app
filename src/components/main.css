@@ -3,6 +3,7 @@ body {
     width: 100%;
     min-height: 100%;
     font-family: math;
+    background-color: rgb(241, 241, 241);
 }
 
 * {

@@ -108,8 +108,12 @@
     margin-top: 30px;
 }
 
-.contacts li:hover {
+.pointer:hover {
     color: rgb(35, 88, 38);
+}
+
+.adress {
+    cursor: text!important;
 }
 
 .d-f {
@@ -155,4 +159,208 @@
     color: white;
     font-size: 32px;
     margin-right: 60px;
+}
+
+iframe {
+    border: 0;
+}
+
+.map {
+    margin: 30px 0;
+}
+
+.map p {
+    font-size: 18px;
+}
+
+.filter-menu {
+    width: 250px;
+    padding: 20px;
+    background-color: #fff;
+    border-right: 1px solid #ccc;
+}
+
+.filter-menu h2 {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.filter-group {
+    margin-bottom: 20px;
+}
+
+.filter-group h3 {
+    font-size: 1em;
+    margin-bottom: 10px;
+    color: #666;
+}
+
+.filter-group ul {
+    list-style: none;
+    padding: 0;
+}
+
+.filter-group li a {
+    display: block;
+    padding: 5px 0;
+    text-decoration: none;
+    color: #333;
+}
+
+.filter-group li a:hover {
+    color: #000;
+}
+
+.price-range label {
+    display: block;
+    margin-bottom: 5px;
+    color: #666;
+}
+
+.price-range input {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+
+.rating label {
+    display: inline-block;
+    margin-right: 10px;
+    color: #333;
+}
+
+.availability label {
+    color: #333;
+}
+
+.filter-menu button {
+    padding: 10px 20px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.filter-menu button:hover {
+    background-color: #333;
+}
+
+.catalog {
+    display: flex;
+}
+
+.filter-menu {
+    height: 100%;
+}
+
+.card {
+    background-color: white;
+}
+
+.icon {
+    width: 20px;
+}
+
+.sort_btn {
+    display: flex;
+    align-items: center;
+    background: #ffffff;
+    padding: 5px;
+    font-size: 15px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+.sort_btns {
+    display: flex;
+}
+
+.sorting {
+    display: flex;
+    flex-direction: column;
+    padding-left: 45px;
+    padding-top: 20px;
+}
+
+.sort {
+    width: 25%;
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+.sort_hidden {
+    display: flex;
+}
+
+.sort {
+    visibility: hidden;
+    flex-direction: column;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    padding: 10px;
+}
+
+.option {
+    padding: 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    font-size: 16px;
+    color: #333;
+    margin: 5px 0;
+}
+
+.option:hover {
+    background-color: #f0f0f0;
+}
+
+.checked {
+    background: black;
+    color: white;
+}
+
+.checked:hover {
+    background: black!important;
+    color: white!important;
+}
+
+.sort_one {
+    position: absolute;
+}
+
+.sort_two {
+    position: absolute;
+    left: 31%;
+    width: 200px;
+}
+
+.sort_three {
+    position: absolute;
+    left: 38%;
+}
+
+
+/* .sort_btn_one:hover .sort_one {
+    visibility: visible;
+}
+
+.sort_btn_two:hover .sort_two {
+    visibility: visible;
+}
+
+.sort_btn_three:hover .sort_three {
+    visibility: visible;
+} */
+
+.sort_btn:hover {
+    background-color: rgba(0, 0, 0, 0.095);
 }

@@ -1,4 +1,4 @@
-import data from "./goods.json";
+import data from "../goods.json";
 
 function GoodsRender() {
   const propertyMap = {

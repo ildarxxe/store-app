@@ -1,6 +1,10 @@
 import { Link } from "react-router-dom";
+import basketIcon from '../images/basket.png';
+import contactsIcon from '../images/contacts.png';
+import profileIcon from '../images/profile.png';
 
 function Header() {
+
     return (
         <header className="header">
             <nav>
@@ -13,14 +17,20 @@ function Header() {
                             className="logotype"
                         />
                     </Link>
-                    <Link to="/basket" className="link">
-                        Корзина
+                    <Link to="/basket" className="link" data-title="Корзина">
+                        <img src={basketIcon} alt="" />
                     </Link>
-                    <Link to="/contacts" className="link">
-                        Контакты
+                    <Link to="/contacts" className="link" data-title="Контакты">
+                        <img src={contactsIcon} alt="" />
                     </Link>
-                    <Link to="/menu" className="link">
-                        Меню
+                    <Link to="/profile" className="link" data-title="Профиль">
+                        <img src={profileIcon} alt="" />
+                    </Link>
+                    <Link to="/catalog" className="link">
+                        Каталог товаров
+                    </Link>
+                    <Link to="/orders" className="link">
+                        Мои заказы
                     </Link>
                 </div>
             </nav>
