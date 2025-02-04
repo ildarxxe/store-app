@@ -1,0 +1,158 @@
+.categories {
+    width: 22%;
+    padding-left: 20px;
+}
+
+.group {
+    text-decoration: none;
+    color: black;
+    display: inline-flex;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.group>h3 {
+    position: relative;
+    display: inline-block;
+    margin: 0;
+    font-size: 16px;
+}
+
+.group>h3::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0;
+    height: 2px;
+    background-color: #000000;
+    transition: width 0.3s ease;
+}
+
+.group:hover>h3::after {
+    width: 100%;
+}
+
+.groups {
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.group:hover {
+    background-color: #f0f0f0;
+}
+
+.goods {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.goods_title {
+    text-align: center;
+}
+
+.goods_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 25px;
+    justify-content: space-around;
+}
+
+.card {
+    width: 30%;
+    border: 1px solid black;
+    margin-bottom: 30px;
+}
+
+.goods_img {
+    width: 100%;
+    height: 70%;
+    border-bottom: 1px solid black;
+}
+
+.goods_text {
+    padding: 10px;
+    font-size: 20px;
+}
+
+.goods_name {
+    margin-bottom: 10px;
+}
+
+.category_title {
+    font-size: 26px;
+}
+
+.contacts {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.contacts li {
+    cursor: pointer;
+    font-size: 20px;
+    margin-bottom: 5px;
+    letter-spacing: .1px;
+    display: inline-block;
+}
+
+.contacts ul {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+.contacts li:hover {
+    color: rgb(35, 88, 38);
+}
+
+.d-f {
+    display: flex;
+    margin-top: 20px;
+}
+
+.stock {
+    height: 500px;
+    background: radial-gradient(#c67979, #00000082);
+    transition: all 0.2s;
+}
+
+.black {
+    height: 500px;
+    width: 100%;
+    position: absolute;
+    background: #00000097;
+    display: none;
+}
+
+.banner {
+    background: url("https://mir-s3-cdn-cf.behance.net/project_modules/fs/31f1af215185621.6765a9b14c848.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+}
+
+.stock:hover .black {
+    display: block;
+}
+
+.banner_links {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner_link {
+    text-decoration: none;
+    color: white;
+    font-size: 32px;
+    margin-right: 60px;
+}

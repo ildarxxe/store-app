@@ -1,0 +1,286 @@
+[{
+        "id": "1",
+        "name": "Футболка мужская",
+        "price": 1500,
+        "brand": "Nike",
+        "size": "L",
+        "color": "черный",
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuJsNWulsaFxfw8UAeyo-0oa-C_3uZ4x7how&s",
+        "category": "Одежда и обувь"
+    },
+    {
+        "id": "2",
+        "name": "Кроссовки женские",
+        "price": 5000,
+        "brand": "Adidas",
+        "size": "38",
+        "color": "белый",
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBZs9Y8udaHNsfm-9bn-qszf83UCGLNqM6TQ&s",
+        "category": "Одежда и обувь"
+    },
+    {
+        "id": "3",
+        "name": "Джинсы мужские",
+        "price": 3000,
+        "brand": "Levi's",
+        "size": "32",
+        "color": "синий",
+        "img": "https://cdn.zenden.cloud/jS6Lz0ztFwgM-Yg5GNoeh5_C7_SDOmMI0ma_dSuMcqc/resize:fit:500:500:false:false:ce:0:0/aHR0cHM6Ly96ZW5kZW4ucnUvdXBsb2FkL2libG9jay83NjYvaXBvb3EycHNoem1ld2Yzaml5bGNjeGFieDAzMThmcmYuanBn.jpg",
+        "category": "Одежда и обувь"
+    },
+    {
+        "id": "4",
+        "name": "Платье женское",
+        "price": 4000,
+        "brand": "Zara",
+        "size": "M",
+        "color": "красный",
+        "img": "https://basket-18.wbbasket.ru/vol3052/part305221/305221696/images/c516x688/1.webp",
+        "category": "Одежда и обувь"
+    },
+    {
+        "id": "5",
+        "name": "Ботинки мужские",
+        "price": 6000,
+        "brand": "Timberland",
+        "size": "43",
+        "color": "коричневый",
+        "img": "https://basket-17.wbbasket.ru/vol2685/part268555/268555760/images/c516x688/1.webp",
+        "category": "Одежда и обувь"
+    },
+    {
+        "id": "6",
+        "name": "Смартфон",
+        "price": 80000,
+        "brand": "Apple",
+        "model": "iPhone 13",
+        "color": "черный",
+        "img": "https://basket-15.wbbasket.ru/vol2302/part230282/230282022/images/c516x688/1.webp",
+        "category": "Электроника"
+    },
+    {
+        "id": "7",
+        "name": "Ноутбук",
+        "price": 120000,
+        "brand": "HP",
+        "model": "Pavilion",
+        "color": "серебристый",
+        "img": "https://basket-16.wbbasket.ru/vol2594/part259417/259417488/images/c516x688/1.webp",
+        "category": "Электроника"
+    },
+    {
+        "id": "8",
+        "name": "Планшет",
+        "price": 30000,
+        "brand": "Samsung",
+        "model": "Galaxy Tab S7",
+        "color": "серый",
+        "img": "https://basket-02.wbbasket.ru/vol150/part15028/15028554/images/c516x688/1.webp",
+        "category": "Электроника"
+    },
+    {
+        "id": "9",
+        "name": "Наушники",
+        "price": 10000,
+        "brand": "Sony",
+        "model": "WH-1000XM4",
+        "color": "черный",
+        "img": "https://basket-17.wbbasket.ru/vol2783/part278361/278361860/images/c516x688/1.webp",
+        "category": "Электроника"
+    },
+    {
+        "id": "10",
+        "name": "Телевизор",
+        "price": 50000,
+        "brand": "LG",
+        "model": "OLED55C1",
+        "color": "черный",
+        "img": "https://basket-14.wbbasket.ru/vol2132/part213219/213219702/images/c516x688/2.webp",
+        "category": "Электроника"
+    },
+    {
+        "id": "11",
+        "name": "Диван",
+        "price": 60000,
+        "brand": "IKEA",
+        "style": "современный",
+        "color": "серый",
+        "img": "https://basket-10.wbbasket.ru/vol1461/part146104/146104385/images/c516x688/1.webp",
+        "category": "Товары для дома"
+    },
+    {
+        "id": "12",
+        "name": "Стол",
+        "price": 20000,
+        "brand": "Hoff",
+        "style": "классический",
+        "color": "коричневый",
+        "img": "https://basket-16.wbbasket.ru/vol2612/part261222/261222385/images/c516x688/1.webp",
+        "category": "Товары для дома"
+    },
+    {
+        "id": "13",
+        "name": "Стул",
+        "price": 5000,
+        "brand": "Leroy Merlin",
+        "style": "минимализм",
+        "color": "белый",
+        "img": "https://basket-05.wbbasket.ru/vol733/part73355/73355695/images/c516x688/1.webp",
+        "category": "Товары для дома"
+    },
+    {
+        "id": "14",
+        "name": "Кровать",
+        "price": 40000,
+        "brand": "Askona",
+        "size": "двуспальная",
+        "color": "бежевый",
+        "img": "https://basket-10.wbbasket.ru/vol1597/part159738/159738077/images/c516x688/1.webp",
+        "category": "Товары для дома"
+    },
+    {
+        "id": "15",
+        "name": "Подушка",
+        "price": 1000,
+        "brand": "Ormatek",
+        "type": "ортопедическая",
+        "color": "белый",
+        "img": "https://basket-04.wbbasket.ru/vol705/part70523/70523073/images/c516x688/1.webp",
+        "category": "Товары для дома"
+    },
+    {
+        "id": "16",
+        "name": "Крем для лица",
+        "price": 2000,
+        "brand": "L'Oreal",
+        "type": "увлажняющий",
+        "img": "https://basket-01.wbbasket.ru/vol81/part8104/8104661/images/c516x688/1.webp",
+        "category": "Красота и здоровье"
+    },
+    {
+        "id": "17",
+        "name": "Шампунь",
+        "price": 1000,
+        "brand": "Garnier",
+        "type": "для объема",
+        "img": "https://basket-15.wbbasket.ru/vol2373/part237343/237343312/images/c516x688/1.webp",
+        "category": "Красота и здоровье"
+    },
+    {
+        "id": "18",
+        "name": "Тушь для ресниц",
+        "price": 1500,
+        "brand": "Maybelline",
+        "type": "удлиняющая",
+        "img": "https://basket-13.wbbasket.ru/vol2010/part201048/201048176/images/c516x688/1.webp",
+        "category": "Красота и здоровье"
+    },
+    {
+        "id": "19",
+        "name": "Витамины",
+        "price": 3000,
+        "brand": "Solgar",
+        "type": "мультивитамины",
+        "img": "https://basket-07.wbbasket.ru/vol1103/part110352/110352358/images/c516x688/1.webp",
+        "category": "Красота и здоровье"
+    },
+    {
+        "id": "20",
+        "name": "Зубная паста",
+        "price": 500,
+        "brand": "Colgate",
+        "type": "отбеливающая",
+        "img": "https://basket-16.wbbasket.ru/vol2578/part257897/257897589/images/c516x688/1.webp",
+        "category": "Красота и здоровье"
+    },
+    {
+        "id": "21",
+        "name": "Игрушка",
+        "price": 1000,
+        "brand": "Fisher-Price",
+        "type": "развивающая",
+        "img": "https://basket-12.wbbasket.ru/vol1745/part174533/174533762/images/c516x688/1.webp",
+        "category": "Детские товары"
+    },
+    {
+        "id": "22",
+        "name": "Одежда для новорожденных",
+        "price": 2000,
+        "brand": "Mothercare",
+        "size": "56",
+        "img": "https://basket-16.wbbasket.ru/vol2570/part257014/257014900/images/c516x688/1.webp",
+        "category": "Детские товары"
+    },
+    {
+        "id": "23",
+        "name": "Детская коляска",
+        "price": 100000,
+        "brand": "Bugaboo",
+        "model": "Bee5",
+        "img": "https://basket-15.wbbasket.ru/vol2338/part233819/233819234/images/c516x688/1.webp",
+        "category": "Детские товары"
+    },
+    {
+        "id": "24",
+        "name": "Детское питание",
+        "price": 500,
+        "brand": "Nestle",
+        "type": "молочная смесь",
+        "img": "https://basket-12.wbbasket.ru/vol1789/part178964/178964635/images/c516x688/1.webp",
+        "category": "Детские товары"
+    },
+    {
+        "id": "25",
+        "name": "Подгузники",
+        "price": 1500,
+        "brand": "Pampers",
+        "size": "3",
+        "img": "https://basket-03.wbbasket.ru/vol386/part38646/38646640/images/c516x688/1.webp",
+        "category": "Детские товары"
+    },
+    {
+        "id": "26",
+        "name": "Книга",
+        "price": 500,
+        "author": "Лев Толстой",
+        "title": "Война и мир",
+        "img": "https://basket-12.wbbasket.ru/vol1832/part183278/183278093/images/c516x688/1.webp",
+        "category": "Другие категории"
+    },
+    {
+        "id": "27",
+        "name": "Велосипед",
+        "price": 15000,
+        "brand": "Giant",
+        "model": "Talon 2",
+        "img": "https://basket-04.wbbasket.ru/vol623/part62332/62332367/images/c516x688/1.webp",
+        "category": "Другие категории"
+    },
+    {
+        "id": "28",
+        "name": "Палатка",
+        "price": 8000,
+        "brand": "Tramp",
+        "model": "Lite 2",
+        "img": "https://basket-12.wbbasket.ru/vol1823/part182360/182360718/images/c516x688/1.webp",
+        "category": "Другие категории"
+    },
+    {
+        "id": "29",
+        "name": "Рюкзак",
+        "price": 3000,
+        "brand": "Osprey",
+        "model": "Talon 30",
+        "img": "https://basket-18.wbbasket.ru/vol2843/part284316/284316330/images/c516x688/1.webp",
+        "category": "Другие категории"
+    },
+    {
+        "id": "30",
+        "name": "Мяч футбольный",
+        "price": 1000,
+        "brand": "Adidas",
+        "size": "5",
+        "img": "https://basket-19.wbbasket.ru/vol3122/part312225/312225114/images/c516x688/1.webp",
+        "category": "Другие категории"
+    }
+]

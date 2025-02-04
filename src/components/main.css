@@ -1,0 +1,26 @@
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+    font-family: math;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.app {
+    display: flex;
+    flex-direction: column;
+}
+
+.main {
+    min-height: 87.41vh;
+}
+
+.home {
+    display: flex;
+    flex-direction: column;
+}
