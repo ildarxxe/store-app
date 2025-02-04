@@ -1,25 +1,27 @@
+import { Link } from "react-router-dom";
+
 function Header() {
     return (
         <header className="header">
             <nav>
                 <div className="links">
-                    <a href="/home" className="link logo-link">
+                    <Link to="/home" className="link logo-link">
                         <img
                             src="https://www.amata.kz/local/templates/ilab_it_shop/ilab/img/svg/logo_new.svg"
                             alt="logo"
                             title="home"
                             className="logotype"
                         />
-                    </a>
-                    <a href="/basket" className="link">
+                    </Link>
+                    <Link to="/basket" className="link">
                         Корзина
-                    </a>
-                    <a href="/contacts" className="link">
+                    </Link>
+                    <Link to="/contacts" className="link">
                         Контакты
-                    </a>
-                    <a href="/menu" className="link">
+                    </Link>
+                    <Link to="/menu" className="link">
                         Меню
-                    </a>
+                    </Link>
                 </div>
             </nav>
         </header>
