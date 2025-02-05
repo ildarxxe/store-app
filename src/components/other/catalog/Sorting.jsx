@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 import arrowDown from "../../images/arrow-down.png";
 import swap from "../../images/swap.png";
@@ -18,13 +18,7 @@ function Sorting() {
                 }
                 option.classList.add("checked");
                 selectedOption = option;
-                
-            });
 
-            sortContainers.forEach((sort) => {
-                sort.addEventListener("mouseover", () => {
-                    sort.style.visibility = "visible";
-                });
             });
         });
 
@@ -65,81 +59,48 @@ function Sorting() {
                 }
             });
         });
-
-        let timeoutId;
-
-        sortBtns.forEach((btn, index) => {
-            btn.addEventListener("mouseover", () => {
-                sortBtns.forEach((btn, index) => {
-                    btn.addEventListener("mouseover", () => {
-                        sortContainers.forEach((container, i) => {
-                            if (i === index) {
-                                container.style.visibility = "visible";
-                            } else {
-                                container.style.visibility = "hidden";
-                            }
-                        });
-                    });
-
-                    btn.addEventListener("mouseout", () => {
-                        sortContainers.forEach((container, i) => {
-                            if (i === index) {
-                                container.style.visibility = "hidden";
-                            }
-                        });
-                    });
-                });
-            });
-
-            btn.addEventListener("mouseout", () => {
-                timeoutId = setTimeout(() => {
-                    sortContainers.forEach((container, i) => {
-                        if (i === index) {
-                            container.style.visibility = "hidden";
-                        }
-                    });
-                }, 400);
-            });
-
-            sortContainers[index].addEventListener("mouseover", () => {
-                clearTimeout(timeoutId);
-            });
-
-            sortContainers[index].addEventListener("mouseout", () => {
-                sortContainers[index].style.visibility = "hidden";
-            });
-        });
     });
+
+    const [selectedValue, setSelectedValue] = useState('По популярности');
+
+    const handleOptionClick = (event) => {
+        setSelectedValue(event.target.textContent);
+    };
 
     return (
         <div className="sorting">
-            <div className="sort_btns">
+            <div className="dropdown dropdown_one">
                 <button className="sort_btn sort_btn_one">
                     <img src={swap} className="icon swap" alt="" />{" "}
-                    <span className="value">По популярности</span>{" "}
+                    <span className="value">{selectedValue}</span>{" "}
                     <img className="arrow-down icon" src={arrowDown} alt="" />
                 </button>
+                <div className="sort_one sort">
+                    <div className={`option ${selectedValue === 'По популярности' ? 'checked' : ''}`} onClick={handleOptionClick}>По популярности</div>
+                    <div className={`option ${selectedValue === 'По рейтингу' ? 'checked' : ''}`} onClick={handleOptionClick}>По рейтингу</div>
+                    <div className={`option ${selectedValue === 'По возрастанию цены' ? 'checked' : ''}`} onClick={handleOptionClick}>По возрастанию цены</div>
+                    <div className={`option ${selectedValue === 'По убыванию цены' ? 'checked' : ''}`} onClick={handleOptionClick}>По убыванию цены</div>
+                    <div className={`option ${selectedValue === 'Сначала выгодные' ? 'checked' : ''}`} onClick={handleOptionClick}>Сначала выгодные</div>
+                </div>
+            </div>
+
+            <div className="dropdown dropdown_two">
                 <button className="sort_btn sort_btn_two">
                     По цене{" "}
                     <img className="arrow-down icon" src={arrowDown} alt="" />
                 </button>
-                <button className="sort_btn sort_btn_three">
-                    По дате{" "}
-                    <img className="arrow-down icon" src={arrowDown} alt="" />
-                </button>
-            </div>
-            <div className="sort_hidden">
-                <div className="sort_one sort">
-                    <div className="option checked">По популярности</div>
-                    <div className="option">По рейтингу</div>
-                    <div className="option">По возрастанию цены</div>
-                    <div className="option">По убыванию цены</div>
-                    <div className="option">Сначала выгодные</div>
-                </div>
                 <div className="sort_two sort">
                     <div className="option">Сначала дешевое</div>
                     <div className="option">Сначала дорогое</div>
                 </div>
+            </div>
+
+            <div className="dropdown dropdown_three">
+                <button className="sort_btn sort_btn_three">
+                    По дате{" "}
+                    <img className="arrow-down icon" src={arrowDown} alt="" />
+                </button>
+
                 <div className="sort_three sort">
                     <div className="option">Сначала новое</div>
                     <div className="option">Сначала старое</div>

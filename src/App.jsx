@@ -4,6 +4,7 @@ import Footer from "./components/navigation/Footer";
 import Contacts from "./components/other/Contacts";
 import Home from "./Home";
 import Catalog from "./components/other/catalog/Catalog";
+import Basket from "./components/other/basket/Basket";
 
 import "./components/navigation/navigation.css";
 import "./components/main.css";
@@ -20,6 +21,7 @@ function App() {
                         <Route path="/home" element={<Home />} />
                         <Route path="/contacts" element={<Contacts />} />
                         <Route path="/catalog" element={<Catalog />} />
+                        <Route path="/basket" element={<Basket />} />
                     </Routes>
                 </div>
                 <Footer />

@@ -1,0 +1,22 @@
+[{
+        "id": "1",
+        "name": "Платье женское",
+        "price": 4000,
+        "img": "https://basket-18.wbbasket.ru/vol3052/part305221/305221696/images/c516x688/1.webp",
+        "quantity": "1"
+    },
+    {
+        "id": "2",
+        "name": "Ботинки мужские",
+        "price": 6000,
+        "img": "https://basket-17.wbbasket.ru/vol2685/part268555/268555760/images/c516x688/1.webp",
+        "quantity": "5"
+    },
+    {
+        "id": "3",
+        "name": "Смартфон iPhone 13",
+        "price": 80000,
+        "img": "https://basket-15.wbbasket.ru/vol2302/part230282/230282022/images/c516x688/1.webp",
+        "quantity": "0"
+    }
+]
