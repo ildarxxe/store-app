@@ -1,5 +1,6 @@
 import BasketCard from "./BasketCard";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import data from './basketGoods.json';
 
 function Basket() {
@@ -38,7 +39,7 @@ function Basket() {
                 <h1 className="basket-cards_title">Товары в корзине:</h1>
             </div>
             <BasketCard onQuantityChange={handleQuantityChange}/>
-            <button className="order_btn">Оформить заказ</button>
+            <Link to="/checkout" className="order_btn">Оформить заказ</Link>
         </div>
     );
 }

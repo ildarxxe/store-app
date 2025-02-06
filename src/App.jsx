@@ -5,6 +5,7 @@ import Contacts from "./components/other/Contacts";
 import Home from "./Home";
 import Catalog from "./components/other/catalog/Catalog";
 import Basket from "./components/other/basket/Basket";
+import Checkout from "./components/checkout/Checkout";
 
 import "./components/navigation/navigation.css";
 import "./components/main.css";
@@ -22,6 +23,7 @@ function App() {
                         <Route path="/contacts" element={<Contacts />} />
                         <Route path="/catalog" element={<Catalog />} />
                         <Route path="/basket" element={<Basket />} />
+                        <Route path="/checkout" element={<Checkout />} />
                     </Routes>
                 </div>
                 <Footer />
