@@ -5,7 +5,10 @@ import Contacts from "./components/other/Contacts";
 import Home from "./Home";
 import Catalog from "./components/other/catalog/Catalog";
 import Basket from "./components/other/basket/Basket";
-import Checkout from "./components/checkout/Checkout";
+import Checkout from "./components/other/checkout/Checkout";
+import Login from "./components/other/authorization/Login";
+import Registration from "./components/other/authorization/Registration";
+import Info from "./components/other/information/Info";
 
 import "./components/navigation/navigation.css";
 import "./components/main.css";
@@ -24,6 +27,9 @@ function App() {
                         <Route path="/catalog" element={<Catalog />} />
                         <Route path="/basket" element={<Basket />} />
                         <Route path="/checkout" element={<Checkout />} />
+                        <Route path="/login" element={<Login />} />
+                        <Route path="/registration" element={<Registration />} />
+                        <Route path="/about" element={<Info />} />
                     </Routes>
                 </div>
                 <Footer />

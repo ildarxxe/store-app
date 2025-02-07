@@ -3,6 +3,7 @@ import data from "./basketGoods.json";
 
 function BasketCard({ onQuantityChange }) {
     const [quantities, setQuantities] = useState({});
+    const [items, setItems] = useState(data);
 
     useEffect(() => {
         const initialQuantities = data.reduce((acc, item) => {
@@ -20,17 +21,15 @@ function BasketCard({ onQuantityChange }) {
         onQuantityChange(newQuantities);
     };
 
-    useEffect(() => {
-        const delete_btn = document.querySelector('.basket-card_delete');
-        delete_btn.addEventListener('click', ()=> {
-            
-        })
-    });
+    const handleDelete = (index) => {
+        const newItems = items.filter((item, i) => i !== index);
+        setItems(newItems);
+    };
 
     return (
         <div className="basket-cards">
-            {data.map((item) => (
-                <div key={item.id} className="basket-card">
+            {items.map((item, index) => (
+                <div key={index} className="basket-card">
                     <img src={item.img} alt={item.name} className="basket_img" />
                     <div className="basket-card_text">
                         <h3 className="basket-card_title">
@@ -49,7 +48,7 @@ function BasketCard({ onQuantityChange }) {
                         </p>
                     </div>
                     <div className="basket-btn_cont">
-                        <button className="basket-card_delete">Удалить</button>
+                        <button onClick={() => handleDelete(index)} className="basket-card_delete">Удалить</button>
                     </div>
                 </div>
             ))}

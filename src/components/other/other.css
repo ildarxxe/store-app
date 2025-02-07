@@ -368,69 +368,89 @@ iframe {
 .basket-cards {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    gap: 10px;
+}
+
+.basket {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .basket-card {
-    width: 10%;
-    margin: 18px;
-    border: 1px solid black;
-    border-radius: 20px;
+    width: 150px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
 }
 
 .basket_img {
     width: 100%;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-    cursor: pointer;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.basket-card_text {
+    color: #333;
+}
+
+.basket_text {
+    display: flex;
+    flex-direction: column-reverse;
+    margin: 15px 0;
 }
 
 .basket-card_title {
     font-size: 14px;
-}
-
-.basket-card_text {
-    padding: 0 2px;
-}
-
-.basket-card_text {
-    font-size: 13px;
-}
-
-.basket-card_delete {
-    padding: 5px;
-    border: none;
-    background: #ffe6e6;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 5px;
-}
-
-.basket-card_text>* {
-    margin-bottom: 3px;
-}
-
-.basket-card_delete:hover {
-    background: #ffd3d3;
-}
-
-.basket-btn_cont {
-    text-align: center;
     margin-bottom: 5px;
 }
 
-.basket {
-    display: flex;
-    flex-direction: column;
-    padding-top: 18px;
-}
-
-.basket-cards_title {
-    text-align: center;
+.basket-card_price {
+    font-size: 12px;
+    margin-bottom: 5px;
 }
 
 .basket_summ {
-    position: absolute;
+    font-size: 18px;
+}
+
+.basket-card_quantity {
+    font-size: 12px;
+}
+
+.input_quantity {
+    width: 40px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+.basket-btn_cont {
+    margin-top: 10px;
+    text-align: center;
+    margin-top: auto;
+}
+
+.basket-card_delete {
+    background-color: #eee;
+    color: #333;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.basket-card_delete:hover {
+    background-color: #00000026;
 }
 
 .basket-card_quantity {
@@ -449,7 +469,7 @@ iframe {
 
 .order_btn {
     width: 200px;
-    margin: 0 auto;
+    margin: 15px 0;
     text-align: center;
     padding: 10px;
     border: none;
@@ -576,5 +596,159 @@ iframe {
 }
 
 .summary_title {
+    text-align: center;
+}
+
+.login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.login_form {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    background: black;
+    padding: 30px 50px;
+    margin-top: 20px;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px 0px #000000;
+}
+
+.login_label {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.login_label input {
+    width: 100%;
+    border: 1px solid #666666;
+    outline: none;
+    background: #000000;
+    color: white;
+    height: 40px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 15px;
+}
+
+.login_label_span {
+    font-size: 12px;
+    display: inline-block;
+    margin-bottom: 2px;
+}
+
+.login_label input:focus {
+    box-shadow: 1px 1px 10px 0px #ff0000;
+    border: none;
+}
+
+.login_title {
+    margin-top: 15px;
+}
+
+.registr_btn {
+    text-decoration: none;
+    color: black;
+    margin-bottom: 15px;
+}
+
+.login_submit_form {
+    margin-bottom: 0;
+}
+
+.error_span {
+    margin-bottom: 0;
+    margin-top: 2px;
+    color: red;
+}
+
+.info_text {
+    width: 800px;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.info_text_p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #444;
+    margin-bottom: 25px;
+    font-weight: 300;
+}
+
+.info_title {
+    margin-bottom: 15px;
+}
+
+.info_images {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.info_images img {
+    margin: 0 .5%;
+    width: 32%;
+    height: 253px;
+}
+
+.reviews {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+    padding: 0 40px;
+    justify-content: center;
+}
+
+.review_card {
+    padding: 10px;
+    border: 1px solid;
+    margin: 10px;
+    width: 31.9%;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+.ava {
+    width: 50px;
+    border-radius: 50%;
+    border: 1px solid;
+    cursor: pointer;
+    aspect-ratio: 1 / 1;
+}
+
+.user {
+    display: flex;
+    align-items: center;
+}
+
+.review_name {
+    margin-left: 15px;
+    font-weight: 500;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.rate {
+    margin: 10px 0;
+}
+
+.rating {
+    font-weight: 700;
+}
+
+.reviews_title {
+    margin: 15px 0;
     text-align: center;
 }

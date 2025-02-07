@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import "react-phone-number-input/style.css";
 import PhoneInput from "react-phone-number-input";
 import Paymethod from "./Paymethod";
-import data from "../other/basket/basketGoods.json";
+import data from "../basket/basketGoods.json";
 
 function Checkout() {
     const [value, setValue] = useState();
