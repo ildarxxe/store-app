@@ -3,8 +3,6 @@ import PhoneInput from "react-phone-number-input";
 import { useState, useEffect } from "react";
 
 function Registration() {
-    const [value, setValue] = useState();
-
     const [email, setEmail] = useState('');
     const [tel, setTel] = useState('');
     const [password, setPassword] = useState('');

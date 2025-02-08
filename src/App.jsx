@@ -9,6 +9,9 @@ import Checkout from "./components/other/checkout/Checkout";
 import Login from "./components/other/authorization/Login";
 import Registration from "./components/other/authorization/Registration";
 import Info from "./components/other/information/Info";
+import Account from "./components/other/profile/Account";
+import Item from './components/other/home/Item';
+import data from './components/other/goods.json';
 
 import "./components/navigation/navigation.css";
 import "./components/main.css";
@@ -30,6 +33,8 @@ function App() {
                         <Route path="/login" element={<Login />} />
                         <Route path="/registration" element={<Registration />} />
                         <Route path="/about" element={<Info />} />
+                        <Route path="/account/*" exact element={<Account />} />
+                        <Route path="/product/:productName" element={<Item />} />
                     </Routes>
                 </div>
                 <Footer />

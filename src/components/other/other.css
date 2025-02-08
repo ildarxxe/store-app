@@ -68,6 +68,36 @@
     width: 30%;
     border: 1px solid black;
     margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.card_btn {
+    margin: auto 10px 15px 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.product_check {
+    padding: 7px 12px;
+    border: none;
+    color: white;
+    background: black;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.heart {
+    font-size: 32.4px;
+    cursor: pointer;
+}
+
+.heart.fas {
+    color: #ffba00!important;
 }
 
 .goods_img {
@@ -98,7 +128,7 @@
     cursor: pointer;
     font-size: 20px;
     margin-bottom: 5px;
-    letter-spacing: .1px;
+    letter-spacing: 0.1px;
     display: inline-block;
 }
 
@@ -113,7 +143,7 @@
 }
 
 .adress {
-    cursor: text!important;
+    cursor: text !important;
 }
 
 .d-f {
@@ -330,8 +360,8 @@ iframe {
 }
 
 .checked:hover {
-    background: black!important;
-    color: white!important;
+    background: black !important;
+    color: white !important;
 }
 
 .sort_one {
@@ -680,7 +710,7 @@ iframe {
 }
 
 .info_text_p {
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: 18px;
     line-height: 1.6;
     color: #444;
@@ -698,7 +728,7 @@ iframe {
 }
 
 .info_images img {
-    margin: 0 .5%;
+    margin: 0 0.5%;
     width: 32%;
     height: 253px;
 }
@@ -751,4 +781,294 @@ iframe {
 .reviews_title {
     margin: 15px 0;
     text-align: center;
+}
+
+.account_menu {
+    background-color: #fff;
+    color: #000;
+    padding: 10px;
+}
+
+.account_menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.account_menu li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.account_menu_link {
+    color: #000;
+    text-decoration: none;
+}
+
+.account_menu_link:hover {
+    text-decoration: underline;
+}
+
+.user_data_profile {
+    color: #000;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.user_data_profile h2 {
+    margin-top: 0;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.user_data_profile p {
+    margin-bottom: 10px;
+}
+
+.user_data_profile a {
+    color: #000;
+    text-decoration: none;
+}
+
+.user_data_profile a:hover {
+    text-decoration: underline;
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+}
+
+.user_data {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.profile-edit-window {
+    width: 300px;
+    margin: 100px auto;
+    border: 1px solid #000;
+    padding: 20px;
+    box-shadow: 2px 2px 10px 0px #000000;
+}
+
+.profile-edit-window h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 10px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input:not(.input_phone) {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #000;
+    box-sizing: border-box;
+}
+
+.saveChange {
+    background-color: #000;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.phone_input_country_two {
+    height: 33.6px !important;
+}
+
+.input_phone {
+    padding: 8px 8px 8px 65px;
+    width: 100%;
+    border: 1px solid #000;
+    box-sizing: border-box;
+}
+
+.PhoneInputCountryIcon {
+    background: none !important;
+    box-shadow: none !important;
+}
+
+.order_list,
+.favorites {
+    display: flex;
+    flex-direction: column;
+    padding: 15px 40px;
+}
+
+.orders_cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.order_card,
+.favorite_card {
+    margin: 10px;
+}
+
+.orders_title {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.favorites_cards {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.modal-window_wrap {
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    height: 100%;
+    background: #00000099;
+}
+
+.modal-window {
+    width: 600px;
+    box-shadow: 2px 2px 10px 0 black;
+    border-radius: 10px;
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    height: 200px;
+    z-index: 2;
+    background: white;
+}
+
+.modal-window_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.select {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.select button {
+    padding: 5px 25px;
+    border: none;
+    border-radius: 5px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.agreement {
+    border: 1px solid black !important;
+}
+
+.refuse {
+    background-color: #000000;
+    color: white;
+}
+
+.order_card {
+    transition: background-color 0.3s ease;
+}
+
+.order_card.status-green {
+    background-color: #388d3a;
+}
+
+.order_card.status-yellow {
+    background-color: #afa228;
+}
+
+.order_card.status-orange {
+    background-color: #ff9900;
+}
+
+.order_card.status-grey {
+    background-color: #a0a0a0;
+}
+
+
+/* Item.css */
+
+.item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 120px;
+    font-family: sans-serif;
+    color: #333;
+    background-color: #f8f8f8;
+}
+
+.image-gallery {
+    margin-bottom: 20px;
+}
+
+.product-image {
+    max-width: 300px;
+    height: auto;
+    border: 1px solid #ccc;
+}
+
+.product-info {
+    margin-bottom: 20px;
+    text-align: center;
+    width: 50%;
+}
+
+.product-info h1 {
+    margin-bottom: 10px;
+}
+
+.product-description {
+    margin-bottom: 15px;
+}
+
+.product-properties {
+    margin-bottom: 15px;
+}
+
+.product-properties p {
+    margin-bottom: 5px;
+}
+
+.product-actions {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.product-price {
+    margin-right: 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.add-to-cart {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.product-reviews,
+.related-products {
+    width: 100%;
+    margin-bottom: 20px;
+    border-top: 1px solid #ccc;
+    padding-top: 20px;
 }

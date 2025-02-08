@@ -28,7 +28,7 @@ function Header() {
                     <Link to="/contacts" className="link" data-title="Контакты">
                         <img src={contactsIcon} alt="" />
                     </Link>
-                    <Link to="/profile" className="link" data-title="Профиль">
+                    <Link to="/account" className="link" data-title="Личный кабинет">
                         <img src={profileIcon} alt="" />
                     </Link>
                     <Link to="/login" className="link" data-title="Войти">

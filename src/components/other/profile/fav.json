@@ -1,0 +1,71 @@
+[{
+        "id": "1",
+        "name": "Футболка мужская",
+        "price": 1500,
+        "brand": "Nike",
+        "size": "L",
+        "color": "черный",
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuJsNWulsaFxfw8UAeyo-0oa-C_3uZ4x7how&s",
+        "category": "Одежда и обувь"
+    },
+    {
+        "id": "2",
+        "name": "Кроссовки женские",
+        "price": 5000,
+        "brand": "Adidas",
+        "size": "38",
+        "color": "белый",
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBZs9Y8udaHNsfm-9bn-qszf83UCGLNqM6TQ&s",
+        "category": "Одежда и обувь"
+    },
+    {
+        "id": "3",
+        "name": "Джинсы мужские",
+        "price": 3000,
+        "brand": "Levi's",
+        "size": "32",
+        "color": "синий",
+        "img": "https://cdn.zenden.cloud/jS6Lz0ztFwgM-Yg5GNoeh5_C7_SDOmMI0ma_dSuMcqc/resize:fit:500:500:false:false:ce:0:0/aHR0cHM6Ly96ZW5kZW4ucnUvdXBsb2FkL2libG9jay83NjYvaXBvb3EycHNoem1ld2Yzaml5bGNjeGFieDAzMThmcmYuanBn.jpg",
+        "category": "Одежда и обувь"
+    },
+    {
+        "id": "4",
+        "name": "Платье женское",
+        "price": 4000,
+        "brand": "Zara",
+        "size": "M",
+        "color": "красный",
+        "img": "https://basket-18.wbbasket.ru/vol3052/part305221/305221696/images/c516x688/1.webp",
+        "category": "Одежда и обувь"
+    },
+    {
+        "id": "5",
+        "name": "Ботинки мужские",
+        "price": 6000,
+        "brand": "Timberland",
+        "size": "43",
+        "color": "коричневый",
+        "img": "https://basket-17.wbbasket.ru/vol2685/part268555/268555760/images/c516x688/1.webp",
+        "category": "Одежда и обувь"
+    },
+    {
+        "id": "6",
+        "name": "Смартфон",
+        "price": 80000,
+        "brand": "Apple",
+        "model": "iPhone 13",
+        "color": "черный",
+        "img": "https://basket-15.wbbasket.ru/vol2302/part230282/230282022/images/c516x688/1.webp",
+        "category": "Электроника"
+    },
+    {
+        "id": "7",
+        "name": "Ноутбук",
+        "price": 120000,
+        "brand": "HP",
+        "model": "Pavilion",
+        "color": "серебристый",
+        "img": "https://basket-16.wbbasket.ru/vol2594/part259417/259417488/images/c516x688/1.webp",
+        "category": "Электроника"
+    }
+]
