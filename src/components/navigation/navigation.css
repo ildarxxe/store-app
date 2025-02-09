@@ -69,3 +69,12 @@ footer>nav {
 .link img {
     width: 40px;
 }
+
+.header-mobile {
+    display: none;
+}
+
+.hidden {
+    position: absolute;
+    display: none;
+}

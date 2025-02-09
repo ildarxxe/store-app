@@ -1072,3 +1072,238 @@ iframe {
     border-top: 1px solid #ccc;
     padding-top: 20px;
 }
+
+.fa-bars {
+    color: white;
+    font-size: 20px;
+}
+
+.hidden {
+    display: none;
+    flex-direction: column;
+    background: black;
+    padding: 10px 20px;
+    top: 50px;
+    border-top: 1px solid white;
+    right: 0;
+    gap: 5px;
+}
+
+.hidden_link {
+    display: flex;
+    align-items: center;
+}
+
+.hidden.show {
+    display: flex;
+}
+
+.hidden_filter.show {
+    display: block;
+}
+
+.link_span {
+    margin-left: 10px;
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+    .review_card {
+        width: 45%;
+    }
+    .info_images {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .info_images img {
+        margin: 3px 0.5%;
+        width: 49%;
+    }
+    .info_text_p {
+        width: 86%;
+        margin: 0 auto 25px;
+    }
+    .categories {
+        width: auto;
+    }
+    .card {
+        width: 45%;
+    }
+    .form_checkout {
+        width: 60%;
+    }
+    .contacts {
+        margin-top: 15px;
+    }
+    .profile-edit-window {
+        margin: 20px auto;
+    }
+    .login_form {
+        width: 54%;
+    }
+    .sort_two {
+        left: 61%;
+    }
+    .sort_three {
+        left: 70%;
+    }
+    .item {
+        padding: 20px 120px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .item {
+        padding: 20px 120px;
+    }
+    .contacts {
+        margin-top: 15px;
+    }
+    .profile-edit-window {
+        margin: 20px auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .categories {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .d-f {
+        flex-direction: column;
+    }
+    .groups {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+    }
+    .goods_title {
+        font-size: 14px;
+        margin-top: 10px;
+    }
+    .goods_wrapper {
+        padding: 10px 10px;
+    }
+    .card {
+        width: 47%;
+    }
+    .basket-cards {
+        padding: 0 10px;
+        justify-content: center;
+    }
+    .basket-card {
+        width: 45%;
+    }
+    .summary {
+        width: 90%;
+    }
+    .form_checkout {
+        width: 90%;
+    }
+    .info_text {
+        width: 89%;
+    }
+    .info_images {
+        display: flex;
+        flex-direction: column;
+    }
+    .info_images img {
+        margin: 5px 0.5%;
+        width: 100%;
+    }
+    .review_card {
+        width: 100%;
+    }
+    .contacts {
+        margin-top: 10px;
+    }
+    .account_menu ul {
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+        justify-content: space-around;
+        flex-direction: row;
+    }
+    .account_menu li {
+        margin: 0 5px;
+        text-align: center;
+    }
+    .account_menu {
+        padding: 10px 0;
+    }
+    .order_list,
+    .favorites {
+        padding: 15px 10px;
+    }
+    .profile-edit-window {
+        margin: 20px auto;
+    }
+    .warn {
+        padding: 0 10px;
+    }
+    .modal-window {
+        width: 90%;
+    }
+    .login_form {
+        width: 90%;
+    }
+    .header-desktop {
+        display: none;
+    }
+    .header-mobile {
+        display: block;
+    }
+    .filter-group {
+        margin-bottom: 10px;
+    }
+    .hidden_filter {
+        display: none;
+    }
+    .catalog {
+        flex-direction: column;
+    }
+    .filter-menu {
+        padding: 10px 15px;
+        width: auto;
+        background: none;
+    }
+    .sorting {
+        padding-left: 15px;
+        padding-top: 0;
+    }
+    .filter-menu h2 {
+        margin-bottom: 0;
+        cursor: pointer;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    .filter-menu h2::after {
+        content: attr(data-content);
+    }
+    .filter-group h3 {
+        margin-bottom: 0;
+    }
+    .price-range input {
+        width: 40%;
+    }
+    .price-range {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .sort_one {
+        width: 50%;
+    }
+    .sort_two {
+        left: 45%;
+    }
+    .sort_three {
+        left: 57%;
+        width: 40%;
+    }
+    .stock {
+        height: 300px;
+    }
+}
