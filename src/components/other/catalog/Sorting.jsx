@@ -8,8 +8,6 @@ function Sorting() {
         const sortOne = document.querySelector(".sort_one");
         const optionsOne = sortOne.querySelectorAll(".option");
         let selectedOption = optionsOne[0];
-        const sortBtns = document.querySelectorAll(".sort_btn");
-        const sortContainers = document.querySelectorAll(".sort");
 
         optionsOne.forEach((option) => {
             option.addEventListener("click", () => {
@@ -73,7 +71,7 @@ function Sorting() {
                 <button className="sort_btn sort_btn_one">
                     <img src={swap} className="icon swap" alt="" />{" "}
                     <span className="value">{selectedValue}</span>{" "}
-                    <img className="arrow-down icon" src={arrowDown} alt="" />
+                    <img className="arrow-down icon_one icon" src={arrowDown} alt="" />
                 </button>
                 <div className="sort_one sort">
                     <div className={`option ${selectedValue === 'По популярности' ? 'checked' : ''}`} onClick={handleOptionClick}>По популярности</div>
@@ -87,7 +85,7 @@ function Sorting() {
             <div className="dropdown dropdown_two">
                 <button className="sort_btn sort_btn_two">
                     По цене{" "}
-                    <img className="arrow-down icon" src={arrowDown} alt="" />
+                    <img className="arrow-down icon_two icon" src={arrowDown} alt="" />
                 </button>
                 <div className="sort_two sort">
                     <div className="option">Сначала дешевое</div>
@@ -98,7 +96,7 @@ function Sorting() {
             <div className="dropdown dropdown_three">
                 <button className="sort_btn sort_btn_three">
                     По дате{" "}
-                    <img className="arrow-down icon" src={arrowDown} alt="" />
+                    <img className="arrow-down icon_three icon" src={arrowDown} alt="" />
                 </button>
 
                 <div className="sort_three sort">

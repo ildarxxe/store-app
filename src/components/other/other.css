@@ -292,6 +292,7 @@ iframe {
 
 .icon {
     width: 20px;
+    transition: all 0.3 s;
 }
 
 .sort_btn {
@@ -387,12 +388,24 @@ iframe {
     visibility: visible;
 }
 
+.dropdown_one:hover .icon_one {
+    transform: rotate(180deg);
+}
+
 .dropdown_two:hover .sort_two {
     visibility: visible;
 }
 
+.dropdown_two:hover .icon_two {
+    transform: rotate(180deg);
+}
+
 .dropdown_three:hover .sort_three {
     visibility: visible;
+}
+
+.dropdown_three:hover .icon_three {
+    transform: rotate(180deg);
 }
 
 .basket-cards {
@@ -1193,7 +1206,7 @@ iframe {
         justify-content: center;
     }
     .basket-card {
-        width: 45%;
+        width: 44%;
     }
     .summary {
         width: 90%;
@@ -1267,6 +1280,7 @@ iframe {
         padding: 10px 15px;
         width: auto;
         background: none;
+        border: none;
     }
     .sorting {
         padding-left: 15px;
@@ -1305,5 +1319,48 @@ iframe {
     }
     .stock {
         height: 300px;
+    }
+    .banner_link {
+        margin-right: 20px;
+    }
+    .black {
+        height: 300px;
+    }
+    .item {
+        padding: 10px 20px;
+    }
+    .review {
+        margin: 5px 0;
+    }
+    .product-info {
+        width: 100%;
+    }
+    .product_check {
+        font-size: 13px;
+    }
+    .heart {
+        font-size: 30px;
+    }
+    .goods_img {
+        height: 210px;
+    }
+    .goods_name {
+        font-size: 18px;
+    }
+    .goods_text p {
+        font-size: 14px;
+    }
+    .filter-menu {
+        display: inline-block;
+    }
+    .map iframe {
+        width: 90%;
+        height: 300px;
+    }
+    .favorite_card {
+        width: 43%;
+    }
+    .basket-cards {
+        width: 100%;
     }
 }
