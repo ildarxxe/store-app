@@ -1,7 +1,8 @@
 import data from "../goods.json";
 import Sorting from "./Sorting";
 import { Link } from "react-router-dom";
-import { useEffect } from "react";
+import { useEffect, useState, useRef } from "react";
+import axios from 'axios';
 
 function CatalogGoods() {
     const propertyMap = {
@@ -15,27 +16,33 @@ function CatalogGoods() {
         style: "Стиль",
     };
 
-        useEffect(() => {
-          const goodsWrapper = document.querySelector(".goods_wrapper");
-    
-          const handleClick = (event) => {
-              if (event.target.classList.contains("heart")) {
-                  event.target.classList.toggle("fas");
-              }
-          };
-    
-          goodsWrapper.addEventListener("click", handleClick);
-    
-          return () => {
-              goodsWrapper.removeEventListener("click", handleClick);
-          };
-      }, []);
+    const goodsWrapperRef = useRef(null);
+
+    useEffect(() => {
+        const goodsWrapper = goodsWrapperRef.current;
+
+        if (goodsWrapper) {
+            const handleClick = (event) => {
+                if (event.target.classList.contains("heart")) {
+                    event.target.classList.toggle("fas");
+                }
+            };
+
+            goodsWrapper.addEventListener("click", handleClick);
+
+            return () => {
+                goodsWrapper.removeEventListener("click", handleClick);
+            };
+        } else {
+            console.error("Элемент .goods_wrapper не найден.");
+        }
+    }, []);
 
     return (
         <div className="catalog_right">
             <Sorting />
             <div className="goods catalog_goods">
-                <div className="goods_wrapper">
+                <div className="goods_wrapper" ref={goodsWrapperRef}>
                     {data.map((item, index) => (
                         <div className="card" key={index}>
                             <img

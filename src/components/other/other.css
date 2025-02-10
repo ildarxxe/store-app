@@ -1363,4 +1363,7 @@ iframe {
     .basket-cards {
         width: 100%;
     }
+    .PhoneInputInput::placeholder {
+        opacity: 0;
+    }
 }

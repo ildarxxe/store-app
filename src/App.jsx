@@ -11,7 +11,6 @@ import Registration from "./components/other/authorization/Registration";
 import Info from "./components/other/information/Info";
 import Account from "./components/other/profile/Account";
 import Item from './components/other/home/Item';
-import data from './components/other/goods.json';
 
 import "./components/navigation/navigation.css";
 import "./components/main.css";
