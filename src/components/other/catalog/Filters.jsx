@@ -1,41 +1,69 @@
 import data from "./spisok.json";
 import { useState, useEffect } from "react";
 
-function Filters() {
+function Filters({ filter, setFilter }) {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [products, setProducts] = useState(data && data.length > 0 && data[0].products ? data[0].products : []);
+    const [filteredProducts, setFilteredProducts] = useState(products);
+
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
     };
 
     useEffect(() => {
-        const btn = document.querySelector('.filter_title');
-        if (isMenuOpen) {
-            if (btn) {
-                btn.dataset.content = '▲';
-            }
-        } else {
-            if (btn) {
-                btn.dataset.content = "▼"
-            }
+        const btn = document.querySelector(".filter_title");
+        if (btn) {
+            btn.dataset.content = isMenuOpen ? "▲" : "▼";
         }
-    })
-    
+    }, [isMenuOpen]);
+
+    useEffect(() => {
+        const filtered = products.filter((product) => {
+            const categoryMatch =
+                filter.category === null || product.category === filter.category;
+            const brandMatch =
+                filter.brand === null || product.brand === filter.brand;
+            return categoryMatch && brandMatch;
+        });
+        setFilteredProducts(filtered);
+    }, [filter, products]);
+
+    const filterHandleCategory = (category) => {
+        setFilter({ ...filter, category });
+    };
+
+    const filterHandleBrand = (brand) => {
+        setFilter({ ...filter, brand });
+    };
+
+    const clearFilter = () => {
+        setFilter({ category: null, brand: null });
+    };
+
     return (
         <div className="filters">
             <aside className="filter-menu">
-                <h2 className="filter_title" data-content="▼" onClick={toggleMenu}>
+                <h2
+                    className="filter_title"
+                    data-content="▼"
+                    onClick={toggleMenu}
+                >
                     Фильтры
                 </h2>
-                <div className={`hidden_filter ${isMenuOpen ? 'show' : ''}`}>
+                <div className={`hidden_filter ${isMenuOpen ? "show" : ""}`}>
                     <div className="filter-group">
                         <h3>Категории</h3>
                         <ul>
-                            {data.map((item, index) => (
-                                <li className="item_category" key={index}>
-                                    <a href="#" className="link_category">
-                                        {item.category}
-                                    </a>
+                            {data[0].category.map((item, index) => (
+                                <li
+                                    className={`item_category link_category ${
+                                        filter.category === item ? "active" : ""
+                                    }`}
+                                    onClick={() => filterHandleCategory(item)}
+                                    key={index}
+                                >
+                                    {item}
                                 </li>
                             ))}
                         </ul>
@@ -44,11 +72,14 @@ function Filters() {
                     <div className="filter-group">
                         <h3>Бренды</h3>
                         <ul>
-                            {data.map((item, index) => (
-                                <li className="item_brand" key={index}>
-                                    <a className="link_brand" href="#">
-                                        {item.brand}
-                                    </a>
+                            {data[0].brand.map((item, index) => (
+                                <li
+                                    className={`item_brand link_brand ${
+                                        filter.brand === item ? "active" : ""
+                                    }`}
+                                    onClick={() => filterHandleBrand(item)}
+                                >
+                                    {item}
                                 </li>
                             ))}
                         </ul>

@@ -45,6 +45,12 @@ function Item() {
                         }
                         return null;
                     })}
+                    <p className="rate">
+                        Рейтинг: <span className="rating">{product.rating}</span>
+                    </p>
+                    <p className="date">
+                        Дата: <span className="date_span">{product.date}</span>
+                    </p>
                 </div>
             </div>
 

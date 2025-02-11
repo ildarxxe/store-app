@@ -230,6 +230,8 @@ iframe {
 .filter-group ul {
     list-style: none;
     padding: 0;
+    display: flex;
+    flex-direction: column;
 }
 
 .filter-group li a {
@@ -1366,4 +1368,15 @@ iframe {
     .PhoneInputInput::placeholder {
         opacity: 0;
     }
+}
+
+.catalog_right {
+    width: 100%;
+}
+
+.link_category,
+.link_brand {
+    display: inline-block;
+    cursor: pointer;
+    margin-bottom: 5px;
 }
