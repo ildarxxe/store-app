@@ -4,22 +4,12 @@ import { Link } from "react-router-dom";
 import { useEffect, useState, useRef } from "react";
 
 function CatalogGoods({ filter }) {
-    const [sortedData, setSortedData] = useState(data);
-    const [products, setProducts] = useState(
-        data && data.length > 0 ? data : []
-    );
-    const [value, setValue] = useState("По популярности");
-    const [valuePrice, setValuePrice] = useState("");
-    const [valueDate, setValueDate] = useState("");
+    const [products, setProducts] = useState(data);
+    const [sortBy, setSortBy] = useState("popularity");
+    const [sortDirection, setSortDirection] = useState("asc");
+    const [priceSort, setPriceSort] = useState(null);
+    const [dateSort, setDateSort] = useState(null);
     const [displayedProducts, setDisplayedProducts] = useState([]);
-
-    const filteredProducts = products.filter((product) => {
-        const categoryMatch =
-            filter.category === null || product.category === filter.category;
-        const brandMatch =
-            filter.brand === null || product.brand === filter.brand;
-        return categoryMatch && brandMatch;
-    });
 
     const propertyMap = {
         model: "Модель",
@@ -54,94 +44,68 @@ function CatalogGoods({ filter }) {
         }
     }, []);
 
-    const handleOptionClick = (event) => {
-        setValue(event.target.textContent);
+ 
+    const handleSortChange = (newSortBy) => {
+        setSortBy(newSortBy);
+        setPriceSort(null);
+        setDateSort(null);
     };
 
-    const handleOptionPriceClick = (event) => {
-        setValuePrice(event.target.textContent);
+    const handleSortDirectionChange = (newSortDirection) => {
+        setSortDirection(newSortDirection);
     };
 
-    const handleOptionDateClick = (event) => {
-        setValueDate(event.target.textContent);
+    const handlePriceSortChange = (newPriceSort) => {
+        setPriceSort(newPriceSort);
     };
 
+    const handleDateSortChange = (newDateSort) => {
+        setDateSort(newDateSort);
+    };
+    
     useEffect(() => {
         const filteredProducts = products.filter((product) => {
             return (
-                (!filter ||
-                    filter.category === null ||
-                    product.category === filter.category) &&
-                (!filter ||
-                    filter.brand === null ||
-                    product.brand === filter.brand)
+                (filter.category === null || product.category === filter.category) &&
+                (filter.brand === null || product.brand === filter.brand)
             );
         });
-
+    
         let newSortedData = [...filteredProducts];
-
-        switch (value) {
-            case "По возрастанию цены":
-                newSortedData = [...filteredProducts].sort(
-                    (a, b) => a.price - b.price
-                );
-                break;
-            case "По убыванию цены":
-                newSortedData = [...filteredProducts].sort(
-                    (a, b) => b.price - a.price
-                );
-                break;
-            case "По популярности":
-                newSortedData = [...filteredProducts];
-                break;
-            case "По рейтингу":
-                newSortedData = [...filteredProducts].sort(
-                    (a, b) => b.rating - a.rating
-                );
-                break;
-            default:
-                break;
+    
+        if (sortBy === "popularity") {
+        } else if (sortBy === "rating") {
+            newSortedData.sort((a, b) => (sortDirection === "asc" ? b.rating - a.rating : a.rating - b.rating));
+        } else if (sortBy === "price") {
+            newSortedData.sort((a, b) => (sortDirection === "asc" ? a.price - b.price : b.price - a.price));
         }
-        switch (valuePrice) {
-            case "Сначала дешевое":
-                newSortedData = [...filteredProducts].sort(
-                    (a, b) => a.price - b.price
-                );
-                break;
-            case "Сначала дорогое":
-                newSortedData = [...filteredProducts].sort(
-                    (a, b) => b.price - a.price
-                );
-                break;
-            default:
-                break;
+    
+        if (priceSort === "asc") {
+            newSortedData.sort((a, b) => a.price - b.price);
+        } else if (priceSort === "desc") {
+            newSortedData.sort((a, b) => b.price - a.price);
         }
-        switch (valueDate) {
-            case "Сначала старое":
-                newSortedData = [...filteredProducts].sort(
-                    (a, b) => new Date(a.date) - new Date(b.date)
-                );
-                break;
-            case "Сначала новое":
-                newSortedData = [...filteredProducts].sort(
-                    (a, b) => new Date(b.date) - new Date(a.date)
-                );
-                break;
-            default:
-                break;
+    
+        if (dateSort === "asc") {
+            newSortedData.sort((a, b) => new Date(b.date) - new Date(a.date));
+        } else if (dateSort === "desc") {
+            newSortedData.sort((a, b) => new Date(a.date) - new Date(b.date));
         }
-
+    
         setDisplayedProducts(newSortedData);
-        setSortedData(newSortedData);
-    }, [filter, value, valuePrice, valueDate, products]);
+    }, [filter, sortBy, sortDirection, priceSort, dateSort, products]);
 
     return (
         <div className="catalog_right">
             <Sorting
-                sort={value}
-                onClickPrice={handleOptionPriceClick}
-                onClick={handleOptionClick}
-                onClickDate={handleOptionDateClick}
+                sortBy={sortBy}
+                sortDirection={sortDirection}
+                priceSort={priceSort}
+                dateSort={dateSort}
+                onSortChange={handleSortChange}
+                onSortDirectionChange={handleSortDirectionChange}
+                onPriceSortChange={handlePriceSortChange}
+                onDateSortChange={handleDateSortChange}
             />
             <div className="goods catalog_goods">
                 <div className="goods_wrapper" ref={goodsWrapperRef}>

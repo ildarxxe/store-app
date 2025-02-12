@@ -3,9 +3,10 @@ import { useState, useEffect } from "react";
 
 function Filters({ filter, setFilter }) {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const [products, setProducts] = useState(data && data.length > 0 && data[0].products ? data[0].products : []);
+    const [products, setProducts] = useState(
+        data && data.length > 0 && data[0].products ? data[0].products : []
+    );
     const [filteredProducts, setFilteredProducts] = useState(products);
-
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
@@ -21,7 +22,8 @@ function Filters({ filter, setFilter }) {
     useEffect(() => {
         const filtered = products.filter((product) => {
             const categoryMatch =
-                filter.category === null || product.category === filter.category;
+                filter.category === null ||
+                product.category === filter.category;
             const brandMatch =
                 filter.brand === null || product.brand === filter.brand;
             return categoryMatch && brandMatch;
@@ -150,9 +152,14 @@ function Filters({ filter, setFilter }) {
                         </div>
                     </div>
 
-                    <button className="style_btn" type="submit">
-                        Применить
-                    </button>
+                    <div className="btns_filters">
+                        <button className="style_btn" type="submit">
+                            Применить
+                        </button>
+                        <button className="reset_filters" onClick={clearFilter}>
+                            Сбросить
+                        </button>
+                    </div>
                 </div>
             </aside>
         </div>

@@ -1380,3 +1380,19 @@ iframe {
     cursor: pointer;
     margin-bottom: 5px;
 }
+
+.btns_filters {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.reset_filters {
+    background: none!important;
+    color: black!important;
+    border: 1px solid!important;
+}
+
+.reset_filters:hover {
+    background: #0000000f!important;
+}
