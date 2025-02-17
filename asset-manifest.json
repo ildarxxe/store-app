@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/store-app/static/css/main.6861d1c0.css",
-    "main.js": "/store-app/static/js/main.431a3a6f.js",
+    "main.css": "/store-app/static/css/main.b0a5f9a5.css",
+    "main.js": "/store-app/static/js/main.dd47b79f.js",
     "static/media/college.jpeg": "/store-app/static/media/college.ff3cee9fc1bc050b3cbd.jpeg",
     "static/media/college2.jpeg": "/store-app/static/media/college2.9a375fd7bbfe86ef98e4.jpeg",
     "index.html": "/store-app/index.html",
-    "main.6861d1c0.css.map": "/store-app/static/css/main.6861d1c0.css.map",
-    "main.431a3a6f.js.map": "/store-app/static/js/main.431a3a6f.js.map"
+    "main.b0a5f9a5.css.map": "/store-app/static/css/main.b0a5f9a5.css.map",
+    "main.dd47b79f.js.map": "/store-app/static/js/main.dd47b79f.js.map"
   },
   "entrypoints": [
-    "static/css/main.6861d1c0.css",
-    "static/js/main.431a3a6f.js"
+    "static/css/main.b0a5f9a5.css",
+    "static/js/main.dd47b79f.js"
   ]
 }
