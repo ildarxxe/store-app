@@ -15,7 +15,7 @@ function GoodsRender() {
     };
 
     useEffect(() => {
-        const goodsWrapper = document.querySelector(".goods_wrapper");
+        const goodsWrapper = document.querySelector(".goods__wrapper");
 
         const handleClick = (event) => {
             if (event.target.classList.contains("heart")) {
@@ -32,24 +32,24 @@ function GoodsRender() {
 
     return (
         <div className="goods">
-            <div className="goods_title">
+            <div className="goods__title">
                 <h1>Популярные товары</h1>
             </div>
-            <div className="goods_wrapper">
+            <div className="goods__wrapper">
                 {data.map((item, index) => (
                     <div className="card" key={index}>
                         <img
-                            className="goods_img"
+                            className="goods__img"
                             src={item.img}
                             alt={item.name}
                         />
-                        <div className="goods_text">
+                        <div className="goods__text">
                             <h3 className="goods_name">{item.name}</h3>
                             {Object.keys(propertyMap).find(
                                 (key) => item[key]
                             ) && (
                                 <p
-                                    className={`goods_${Object.keys(
+                                    className={`goods__property goods__property_${Object.keys(
                                         propertyMap
                                     ).find((key) => item[key])}`}
                                 >
@@ -59,8 +59,7 @@ function GoodsRender() {
                                                 (key) => item[key]
                                             )
                                         ]
-                                    }{" "}
-                                    :{" "}
+                                    }:{" "}
                                     {
                                         item[
                                             Object.keys(propertyMap).find(
@@ -70,13 +69,13 @@ function GoodsRender() {
                                     }
                                 </p>
                             )}
-                            <p className="goods_price">
+                            <p className="goods__price">
                                 Цена: {item.price} тг.
                             </p>
                         </div>
-                        <div className="card_btn">
+                        <div className="card__btn">
                             <Link
-                                className="product_check"
+                                className="product__check"
                                 to={`/product/${item.name}`}
                             >
                                 Посмотреть

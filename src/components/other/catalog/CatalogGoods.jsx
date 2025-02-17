@@ -96,7 +96,7 @@ function CatalogGoods({ filter }) {
     }, [filter, sortBy, sortDirection, priceSort, dateSort, products]);
 
     return (
-        <div className="catalog_right">
+        <div className="catalog__right">
             <Sorting
                 sortBy={sortBy}
                 sortDirection={sortDirection}
@@ -107,25 +107,25 @@ function CatalogGoods({ filter }) {
                 onPriceSortChange={handlePriceSortChange}
                 onDateSortChange={handleDateSortChange}
             />
-            <div className="goods catalog_goods">
-                <div className="goods_wrapper" ref={goodsWrapperRef}>
+            <div className="goods catalog__goods">
+                <div className="goods__wrapper" ref={goodsWrapperRef}>
                     {displayedProducts.length === 0 ? (
-                        <p className="undefined">Товар не найден</p>
+                        <p className="goods__undefined">Товар не найден</p>
                     ) : (
                         displayedProducts.map((item, index) => (
-                            <div className="card" key={index}>
+                            <div className="card catalog__card" key={index}>
                                 <img
-                                    className="goods_img"
+                                    className="goods__img"
                                     src={item.img}
                                     alt={item.name}
                                 />
-                                <div className="goods_text">
-                                    <h3 className="goods_name">{item.name}</h3>
+                                <div className="goods__text catalog__goods-text">
+                                    <h3 className="goods__name">{item.name}</h3>
                                     {Object.keys(propertyMap).find(
                                         (key) => item[key]
                                     ) && (
                                         <p
-                                            className={`goods_${Object.keys(
+                                            className={`goods__property goods__property_${Object.keys(
                                                 propertyMap
                                             ).find((key) => item[key])}`}
                                         >
@@ -135,7 +135,7 @@ function CatalogGoods({ filter }) {
                                                         propertyMap
                                                     ).find((key) => item[key])
                                                 ]
-                                            }{" "}
+                                            }
                                             :{" "}
                                             {
                                                 item[
@@ -146,25 +146,25 @@ function CatalogGoods({ filter }) {
                                             }
                                         </p>
                                     )}
-                                    <p className="goods_price">
+                                    <p className="goods__price">
                                         Цена: {item.price} тг.
                                     </p>
-                                    <p className="rate">
+                                    <p className="goods__rate">
                                         Рейтинг:{" "}
                                         <span className="rating">
                                             {item.rating}
                                         </span>
                                     </p>
-                                    <p className="date">
+                                    <p className="goods__date">
                                         Дата:{" "}
                                         <span className="date_span">
                                             {item.date}
                                         </span>
                                     </p>
                                 </div>
-                                <div className="card_btn">
+                                <div className="card__btn">
                                     <Link
-                                        className="product_check"
+                                        className="product__check"
                                         to={`/product/${item.name}`}
                                     >
                                         Посмотреть

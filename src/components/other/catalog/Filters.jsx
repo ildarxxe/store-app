@@ -13,7 +13,7 @@ function Filters({ filter, setFilter }) {
     };
 
     useEffect(() => {
-        const btn = document.querySelector(".filter_title");
+        const btn = document.querySelector(".filter__title");
         if (btn) {
             btn.dataset.content = isMenuOpen ? "▲" : "▼";
         }
@@ -45,21 +45,21 @@ function Filters({ filter, setFilter }) {
 
     return (
         <div className="filters">
-            <aside className="filter-menu">
+            <aside className="filters__menu">
                 <h2
-                    className="filter_title"
+                    className="filters__title"
                     data-content="▼"
                     onClick={toggleMenu}
                 >
                     Фильтры
                 </h2>
-                <div className={`hidden_filter ${isMenuOpen ? "show" : ""}`}>
-                    <div className="filter-group">
+                <div className={`filters__hidden ${isMenuOpen ? "show" : ""}`}>
+                    <div className="filters__group">
                         <h3>Категории</h3>
                         <ul>
                             {data[0].category.map((item, index) => (
                                 <li
-                                    className={`item_category link_category ${
+                                    className={`filters__item_category link_category ${
                                         filter.category === item ? "active" : ""
                                     }`}
                                     onClick={() => filterHandleCategory(item)}
@@ -71,10 +71,10 @@ function Filters({ filter, setFilter }) {
                         </ul>
                     </div>
 
-                    <div className="filter-group">
+                    <div className="filters__group">
                         <h3>Бренды</h3>
                         <ul>
-                            {data[0].brand.map((item, index) => (
+                            {data[0].brand.map((item) => (
                                 <li
                                     className={`item_brand link_brand ${
                                         filter.brand === item ? "active" : ""
@@ -87,9 +87,9 @@ function Filters({ filter, setFilter }) {
                         </ul>
                     </div>
 
-                    <div className="filter-group">
+                    <div className="filters__group">
                         <h3>Цена</h3>
-                        <div className="price-range">
+                        <div className="filters__price-range">
                             <label for="min-price">От:</label>
                             <input
                                 type="number"
@@ -107,9 +107,9 @@ function Filters({ filter, setFilter }) {
                         </div>
                     </div>
 
-                    <div className="filter-group">
+                    <div className="filters__group">
                         <h3>Рейтинг</h3>
-                        <div className="rating">
+                        <div className="filters__rating">
                             <input
                                 type="radio"
                                 name="rating"
@@ -144,19 +144,19 @@ function Filters({ filter, setFilter }) {
                         </div>
                     </div>
 
-                    <div className="filter-group">
+                    <div className="filters__group">
                         <h3>В наличии</h3>
-                        <div className="availability">
+                        <div className="filters__availability">
                             <input type="checkbox" id="in-stock" />
                             <label for="in-stock">Только в наличии</label>
                         </div>
                     </div>
 
-                    <div className="btns_filters">
+                    <div className="filters__btns">
                         <button className="style_btn" type="submit">
                             Применить
                         </button>
-                        <button className="reset_filters" onClick={clearFilter}>
+                        <button className="filters__reset" onClick={clearFilter}>
                             Сбросить
                         </button>
                     </div>
