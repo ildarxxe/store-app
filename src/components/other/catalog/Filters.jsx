@@ -13,7 +13,7 @@ function Filters({ filter, setFilter }) {
     };
 
     useEffect(() => {
-        const btn = document.querySelector(".filter__title");
+        const btn = document.querySelector(".filters__title");
         if (btn) {
             btn.dataset.content = isMenuOpen ? "▲" : "▼";
         }
